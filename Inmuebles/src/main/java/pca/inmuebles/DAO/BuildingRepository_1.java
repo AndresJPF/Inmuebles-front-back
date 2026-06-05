@@ -11,16 +11,19 @@ public interface BuildingRepository extends JpaRepository<Building, Long> {
 
     /**
      * Busca edificios por dirección exacta
+     * @return 
      */
     List<Building> findByAddress(String address);
 
     /**
      * Busca edificios por código postal
+     * @param postalCode
      */
     List<Building> findByPostalCode(String postalCode);
 
     /**
      * Busca edificios por ciudad
+     * @return 
      */
     List<Building> findByCity(String city);
 

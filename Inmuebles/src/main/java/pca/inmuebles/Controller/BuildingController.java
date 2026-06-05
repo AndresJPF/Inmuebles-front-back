@@ -37,6 +37,7 @@ public class BuildingController {
 
     /**
      * Obtiene un edificio por ID
+     * @return 
      */
     @GetMapping("/{id}")
     @Operation(summary = "Obtener un edificio por ID", description = "Retorna los detalles de un edificio específico")
@@ -50,6 +51,8 @@ public class BuildingController {
 
     /**
      * Busca edificios por ciudad
+     * @param city
+     * @return 
      */
     @GetMapping("/search/city/{city}")
     @Operation(summary = "Buscar edificios por ciudad", description = "Retorna edificios de una ciudad específica")
@@ -62,6 +65,8 @@ public class BuildingController {
 
     /**
      * Busca edificios por código postal
+     * @param postalCode
+     * @return 
      */
     @GetMapping("/search/postal/{postalCode}")
     @Operation(summary = "Buscar edificios por código postal", description = "Retorna edificios con un código postal específico")
@@ -74,6 +79,9 @@ public class BuildingController {
 
     /**
      * Crea un nuevo edificio
+     * @param building
+     * @param bindingResult
+     * @return 
      */
     @PostMapping
     @Operation(summary = "Crear un nuevo edificio", description = "Registra un nuevo edificio en el sistema")
@@ -91,6 +99,10 @@ public class BuildingController {
 
     /**
      * Actualiza un edificio existente
+     * @param id
+     * @param building
+     * @param bindingResult
+     * @return 
      */
     @PutMapping("/{id}")
     @Operation(summary = "Actualizar un edificio", description = "Modifica los datos de un edificio existente")
@@ -123,6 +135,8 @@ public class BuildingController {
 
     /**
      * Elimina un edificio
+     * @param id
+     * @return 
      */
     @DeleteMapping("/{id}")
     @Operation(summary = "Eliminar un edificio", description = "Borra un edificio del sistema")
@@ -139,6 +153,7 @@ public class BuildingController {
 
     /**
      * Obtiene el total de edificios
+     * @return 
      */
     @GetMapping("/stats/count")
     @Operation(summary = "Contar edificios", description = "Retorna el número total de edificios en el sistema")
