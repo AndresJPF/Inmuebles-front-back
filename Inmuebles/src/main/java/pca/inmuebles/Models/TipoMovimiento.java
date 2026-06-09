@@ -2,8 +2,8 @@ package pca.inmuebles.models;
 
 import jakarta.persistence.*;
 
-//@Entity
-//@Table(name = "tipos_movimiento")
+@Entity
+@Table(name = "tipos_movimiento")
 public class TipoMovimiento {
 
     @Id
